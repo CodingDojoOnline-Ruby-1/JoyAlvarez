@@ -24,6 +24,7 @@ class Dragon < Mammal
 		puts "This dragon has a health of #{@health}"
 	end
 end
+
 Puff = Dragon.new
 Puff.attack_town.attack_town.attack_town.eat_humans.eat_humans.fly.fly
 Puff.display_health

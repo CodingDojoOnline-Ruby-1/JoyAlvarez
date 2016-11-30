@@ -4,6 +4,7 @@ class Project
 		@name = name
 		@description = description
 	end
+	
 	def elevator_pitch
 		"#{@name}, #{@description}"
 	end

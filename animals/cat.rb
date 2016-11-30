@@ -20,6 +20,7 @@ class Cat < Mammal
 		puts "This new animal has a health of #{@health}"
 	end
 end
+
 Buster = Cat.new
 Buster.walk.walk.walk.run.run.pet.pet
 Buster.display_health

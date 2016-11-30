@@ -1,7 +1,6 @@
 # Create a file mammal.rb. In this file, create a Mammal Class with a health value of 150. Also add a method called display_health, which when invoked, prints the health of the Mammal.
 
 # puts "i am the mammal"
-
 class Mammal
 	attr_accessor :health
 	def initialize
