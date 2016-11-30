@@ -39,7 +39,7 @@ puts b.min.to_s
 # Write a program that takes an array, and prints the AVERAGE of the values in the array. For example for an array [2, 10, 3], your program should print an average of 5. You can use a count function with this assignment.
 
 r = [2, 10, 4, 7, 33]
-puts r.reduce(:+) / r.length
+puts r.reduce(:+) / r.length # THIS IS VERY SLICK!
 
 # 7) Array with Odd Numbers
 # Write a program that creates an array 'y' that contains all the odd numbers between 1 to 255. When the program is done, 'y' should have the value of [1, 3, 5, 7, ... 255].
@@ -56,13 +56,13 @@ puts y = (1..255).select {|i| i.odd?}
 y = 4
 arr = [2, 4, 56, 3, 21, 78, 0, 16, 29]
 count = 0
-arr.each {|arr| count+=1 if arr > 4}
+arr.each {|arr| count+=1 if arr > 4} # what's the point of the variable y?  I think you meant to use it here :)
 puts "There are #{count} numbers in my array greater than 4"
 
 # 9) Square the values
 # Given any array x, say [1, 5, 10, -2], create an algorithm that multiplies each value in the array by itself.  When the program is done, the array x should have values that have been squared, say [1, 25, 100, 4].
 x = [1, 5, 10, -2]
-x.each {|x| puts x * x}
+x.each {|x| puts x * x} # Is this affecting the original array or is it only puts'ing the squared values?
 
 # 10) Eliminate Negative Numbers
 # Given any array x, say [1, 5, 10, -2], create an algorithm that replaces any negative number with the value of 0.  When the program is done, x should have no negative values, say [1, 5, 10, 0].
@@ -91,4 +91,4 @@ puts "Now the array has shifted to read #{z}"
 # Write a program that takes an array of numbers and replaces any negative number with the string 'Dojo'.  For example, if array x is initially [-1, -3, 2] after your program is done that array should be ['Dojo', 'Dojo', 2].
 
 y = [-1, 3, 7, -8, 10, -4]
-y.each {|y| if y > 0 then puts y else puts "Dojo" end}
+y.each {|y| if y > 0 then puts y else puts "Dojo" end} # This is only puts'ing correct? How would you replace?
