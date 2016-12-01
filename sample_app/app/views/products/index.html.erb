@@ -1,0 +1,33 @@
+<style>
+input{
+	display: block;
+	margin-bottom: 8px;
+}
+</style>
+
+<h1>Available Products</h1>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Created At</td>
+		</tr>
+		<% @products.each do |product| %>
+		<tr>
+			<td><%= product.name %></td>
+			<td><%= product.description %></td>
+			<td><%= product.price %></td>
+			<td><%= product.created_at.strftime("%b. %d %Y at %H:%M") %></td>
+		</tr>
+		<% end %>
+	</table>
+
+<h2>Create a New Product Here:</h2>
+<form action='/products' method='POST'>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="text" name="name" placeholder="Product Name"/>
+<input type="number" name="price" placeholder="Price"/>
+<textarea name="description" placeholder="Product description"></textarea>
+<input type="submit" value="Create Product" />
+</form>
