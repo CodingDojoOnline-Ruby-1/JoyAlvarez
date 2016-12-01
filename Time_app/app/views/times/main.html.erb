@@ -1,0 +1,38 @@
+<style>
+#wrapper{
+	width: 970px;
+	height: 750px;
+	display: inline-block;
+	background-color: white;
+}
+h4{
+	display: inline-block;
+	border: black solid 2px;
+	padding: 10px;
+	margin-left: 300px;
+	margin-bottom: 50px;
+}
+#date{
+	font-size: 25px;
+	display: inline-block;
+	border: black solid 3px;
+	padding: 35px;
+	margin-left: 240px;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Date and Time</title>
+</head>
+<body>
+	<div id="wrapper">
+		<h4>The current date and time:</h4>
+		<div class="line"><span class="text html basic"><span id="date"><%= Time.now.strftime("Today is: %B %d, %Y") %><p><%= Time.now.strftime("Current time is: %I:%M %p") %></p></span>
+		</span>
+		</div>
+	</div>
+</body>
+</html>
