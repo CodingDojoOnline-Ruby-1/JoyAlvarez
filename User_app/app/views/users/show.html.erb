@@ -1,0 +1,13 @@
+<style>
+	p{
+		font-size: 19px;
+	}
+</style>
+<h1>Show User</h1>
+
+<p>First name: <%= @user.first_name %></p>
+<p>Last name: <%= @user.last_name %></p>
+<p>Email: <%= @user.email %></p>
+
+
+<a href="/users/<%= @user.id %>/edit">Edit</a> | <a href="/">Home</a>

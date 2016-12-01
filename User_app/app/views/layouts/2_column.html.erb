@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Management</title>
+	
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+	<div class="column"> <%= yield :left_column %></div>
+
+	<div class="column"> <%= yield :right_column %></div>
+
+
+</body>
+</html>

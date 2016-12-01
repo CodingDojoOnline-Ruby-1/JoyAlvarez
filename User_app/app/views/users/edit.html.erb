@@ -1,0 +1,31 @@
+<% content_for :left_column do %>
+<style>
+input{
+	display: block;
+	margin-bottom: 18px;
+	height: 20px;
+}
+</style>
+
+<h1>Editing User</h1>
+<form action="/users/<%= @user.id%>" method="post">
+		<input type="hidden" name="_method" value="patch">
+
+	  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	  <label>First name<input type="text" name="user[first_name]" value="<%= @user.first_name %>"></label>
+		<label>Last name<input type="text" name="user[last_name]" value="<%= @user.last_name %>"></label>
+	  <label>Email<input type="text" name="user[email]" value="<%= @user.email %>"></label>
+	  <label>Password<input type="password" name="user[password]" value="<%= @user.password %>"></label>
+	  <input type="submit" value="Update User">
+</form>
+	<a href="/users/<%= @user.id %>">Show</a> | <a href="/">Home</a>
+<% end %>
+
+<% content_for :right_column do %>
+	<% if flash[:errors] != nil %>
+	<%  flash[:errors].each do |error| %>
+		<p><%= error %></p>
+		<% end %>
+ <% end %>
+
+<% end %>
