@@ -34,8 +34,7 @@ class UsersController < ApplicationController
       redirect_to "/"
     else
       flash[:errors] = @user.errors.full_messages
-      # render 'edit'
-      render layout: "2_column"
+      redirect_to "/users/#{@user.id}/edit"
     end
   end
 

@@ -8,22 +8,24 @@ td{
 }
 </style>
 
-<h1>Listing Users</h1>
-	<table>
-		<tr>
-			<td>First</td>
-			<td>Last</td>
-			<td>Email</td>
-			<td>Actions</td>
-		</tr>
-		<% @users.each do |user| %>
-		<tr>
-			<td><%= user.first_name %></td>
-			<td><%= user.last_name %></td>
-			<td><%= user.email %></td>
-			<td><a href="/users/<%= user.id%>">Show</a> | <a href="/users/<%= user.id%>/edit">Edit</a> | <a href="/users/<%=user.id%>" data-method='delete'>Delete</a></td>
-		</tr>
-		<% end %>
-	</table>
+<p><%= flash[:success] %></p>
 
-	<a href="/users/new">New User</a>
+<h1>Listing Users</h1>
+<table>
+	<tr>
+		<td>First</td>
+		<td>Last</td>
+		<td>Email</td>
+		<td>Actions</td>
+	</tr>
+	<% @users.each do |user| %>
+	<tr>
+		<td><%= user.first_name %></td>
+		<td><%= user.last_name %></td>
+		<td><%= user.email %></td>
+		<td><a href="/users/<%= user.id%>">Show</a> | <a href="/users/<%= user.id%>/edit">Edit</a> | <a href="/users/<%=user.id%>" data-method='delete'>Delete</a></td>
+	</tr>
+	<% end %>
+</table>
+
+<a href="/users/new">New User</a>
